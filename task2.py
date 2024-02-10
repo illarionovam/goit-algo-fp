@@ -25,7 +25,7 @@ fig, ax = plt.subplots()
 
 ax.set_aspect('equal', adjustable='box')
 
-depth = 10 # глибину рекурсії можна змніити тут
+depth = 12 # глибину рекурсії можна змінити тут
 
 draw_pyt_tree(depth, 0, 0, 1, 90)
 
