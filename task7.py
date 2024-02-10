@@ -40,5 +40,7 @@ num_experiments = 1000
 # Виконання симуляції
 average_map_of_sums = monte_carlo_simulation(num_experiments)
 
+print("|{:<5}|{:<11}|".format("Сума", "Імовірність"))
+print("-" * 19)
 for i in range(2, 13):
-    print(f"{i}\t{round(average_map_of_sums[i] * 100, 2)}%")
+    print("|{:<5}|{:<11}|".format(i, str(round(average_map_of_sums[i] * 100, 2)) + "%"))
