@@ -59,14 +59,31 @@ def dynamic_programming(budget):
     total_cost = sum(items[item]['cost'] for item in chosen_items)
     return list(chosen_items), total_cost, total_calories
 
-chosen_items, total_cost, total_calories = greedy_algorithm(80)
+budget = 100
+
+chosen_items, total_cost, total_calories = greedy_algorithm(budget)
 print("greedy_algorithm")
 print(f"chosen_items: {chosen_items}")
 print(f"total_cost: {total_cost}")
 print(f"total_calories: {total_calories}")
-
-chosen_items, total_cost, total_calories = dynamic_programming(80)
+print()
+chosen_items, total_cost, total_calories = dynamic_programming(budget)
 print("dynamic_programming")
 print(f"chosen_items: {chosen_items}")
 print(f"total_cost: {total_cost}")
 print(f"total_calories: {total_calories}")
+
+"""
+з цікавих спостережень
+на прикладі бюджету 100 можемо бачити, що жадібні алгоритми не завжди обирають найефективнішу комбінацію:
+
+greedy_algorithm
+chosen_items: ['cola', 'potato', 'pepsi', 'hot-dog']
+total_cost: 80
+total_calories: 870
+
+dynamic_programming
+chosen_items: ['potato', 'pepsi', 'pizza', 'cola']
+total_cost: 100
+total_calories: 970
+"""
