@@ -1,4 +1,6 @@
 import heapq
+import networkx as nx
+import matplotlib.pyplot as plt
 
 def dijkstra(graph, start):
     # ініціалізація відстаней та множини невідвіданих вершин
@@ -40,3 +42,11 @@ shortest_distances = dijkstra(graph, start)
 print(f"Найкоротші шляхи з {start}:")
 for vertex, distance in shortest_distances.items():
     print(F"до {vertex}: {distance}")
+
+G = nx.Graph()
+G.add_nodes_from(graph.keys())
+for key, value in graph.items():
+    for value_i in value:
+        G.add_edge(key, value_i)
+nx.draw(G, with_labels=True)
+plt.show()
