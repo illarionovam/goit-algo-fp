@@ -68,5 +68,5 @@ root.right.left = Node(3)
 # Відображення дерева
 #draw_tree(root)
 
-heap = [0, 4, 1, 5, 10, 3]
+heap = [0, 1, 2, 3, 4, 5, 6, 7]
 draw_heap(heap)
